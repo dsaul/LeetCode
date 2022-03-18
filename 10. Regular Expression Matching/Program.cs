@@ -8,19 +8,58 @@ namespace _10.Regular_Expression_Matching
 	{
 		public static void Main(string[] args)
 		{
-			if (IsMatchBruteForce("a", ".*..a*") != true)
+			if (IsMatch("a", ".*..a*") != true)
 				throw new InvalidOperationException();
-			if (IsMatchBruteForce("aaa", "a*a") != true)
+			if (IsMatch("aaa", "a*a") != true)
 				throw new InvalidOperationException();
-			if (IsMatchBruteForce("aa", ".*") != true)
+			if (IsMatch("aa", ".*") != true)
 				throw new InvalidOperationException();
-			if (IsMatchBruteForce("aa", "a*") != true)
+			if (IsMatch("aa", "a*") != true)
 				throw new InvalidOperationException();
-			if (IsMatchBruteForce("aa", "a") != false)
+			if (IsMatch("aa", "a") != false)
 				throw new InvalidOperationException();
-			if (IsMatchBruteForce("aa", "aa") != true)
+			if (IsMatch("aa", "aa") != true)
 				throw new InvalidOperationException();
 		}
+
+
+
+		public static bool IsMatch(
+			string s, // string
+			string p  // pattern
+			)
+		{
+
+			public static bool DFS(int stringPos, int patternPos)
+			{
+				// Visit
+
+				
+
+				foreach (Node neighbour in node.Neighbours)
+				{
+					if (!visitList.Contains(neighbour))
+						DFS(visitList, neighbour, visitAction);
+				}
+
+
+
+			}
+
+
+			return DFS(0, 0);
+
+		}
+
+
+
+
+
+
+
+
+
+
 
 		public static bool IsMatchBruteForce(
 			string s, // string

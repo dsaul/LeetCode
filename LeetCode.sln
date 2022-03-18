@@ -45,6 +45,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0238. Product of Array Exce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0053. Maximum Subarray", "0053. Maximum Subarray\0053. Maximum Subarray.csproj", "{130259F1-795D-4DEB-8A56-CB4FFE9B634F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0152. Maximum Product Subarray", "0152. Maximum Product Subarray\0152. Maximum Product Subarray.csproj", "{E6BA6EF2-B0F2-4D6B-9A76-B4DEB6FC0ED7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0153. Find Minimum in Rotated Sorted Array", "0153. Find Minimum in Rotated Sorted Array\0153. Find Minimum in Rotated Sorted Array.csproj", "{94885D8F-0FEC-4C9D-844A-8A9CEACB5E5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithm Practice", "Algorithm Practice", "{72E7D56F-9C0E-44C2-B32D-E19FBD7D0738}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Depth First Search", "Depth First Search\Depth First Search.csproj", "{B45A4042-86C5-480B-8989-158B60325D6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,9 +143,24 @@ Global
 		{130259F1-795D-4DEB-8A56-CB4FFE9B634F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{130259F1-795D-4DEB-8A56-CB4FFE9B634F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{130259F1-795D-4DEB-8A56-CB4FFE9B634F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6BA6EF2-B0F2-4D6B-9A76-B4DEB6FC0ED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6BA6EF2-B0F2-4D6B-9A76-B4DEB6FC0ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6BA6EF2-B0F2-4D6B-9A76-B4DEB6FC0ED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6BA6EF2-B0F2-4D6B-9A76-B4DEB6FC0ED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94885D8F-0FEC-4C9D-844A-8A9CEACB5E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94885D8F-0FEC-4C9D-844A-8A9CEACB5E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94885D8F-0FEC-4C9D-844A-8A9CEACB5E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94885D8F-0FEC-4C9D-844A-8A9CEACB5E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B45A4042-86C5-480B-8989-158B60325D6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B45A4042-86C5-480B-8989-158B60325D6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B45A4042-86C5-480B-8989-158B60325D6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B45A4042-86C5-480B-8989-158B60325D6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B45A4042-86C5-480B-8989-158B60325D6D} = {72E7D56F-9C0E-44C2-B32D-E19FBD7D0738}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C631121-AA76-42C1-859E-1381EAF37E4B}
