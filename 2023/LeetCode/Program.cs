@@ -5,7 +5,8 @@ using System.Runtime.Intrinsics.X86;
 
 namespace _00001_Two_Sum
 {
-	public static class Program
+	[TestClass]
+	public class _00001_Two_Sum
 	{
 		// Given an array of integers nums and an integer target,
 		// return indices of the two numbers such that they add up to target.
@@ -28,91 +29,58 @@ namespace _00001_Two_Sum
 		// Input: nums = [3,3], target = 6
 		// Output: [0,1]
 
-		public static int[] TwoSum(int[] nums, int target)
+		public static int[] TwoSumSimple(int[] nums, int target)
 		{
 			int[] result = new int[2] { -1, -1 };
 
-			// Sort the input.
-			int[] sortedNums = new int[nums.Length];
-			Array.Copy(nums, sortedNums, nums.Length);
-			Array.Sort(sortedNums);
-
-			// Find the values.
-			int j = result.Length - 1;
-			int i = sortedNums.Length;
-			int remainder = target;
-			while ((--i) >= 0)
+			for (int i = 0; i<nums.Length; i++)
 			{
-				int num = sortedNums[i];
-				if (num > remainder) 
-					continue;
-
-				result[j] = num;
-				j--;
-				remainder -= num;
-			}
-
-			// Convert values to indexes.
-			List<int> usedIndexes = new();
-			for (int k=0; k< result.Length; k++)
-			{
-				int resVal = result[k];
-
-				for (int l=0; l < nums.Length; l++)
+				for (int j = 0; j < nums.Length; j++)
 				{
-					if (usedIndexes.Contains(l))
+					if (j == i)
 						continue;
 
-					int numVal = nums[l];
-
-					if (resVal == numVal)
+					if (nums[i] + nums[j] == target)
 					{
-						result[k] = l;
-						usedIndexes.Add(l);
-						break;
+						result[0] = i;
+						result[1] = j;
+						goto end;
 					}
 				}
-				
 			}
 
-			// Ensure order smallest index to largest.
-			Array.Sort(result);
-
+			end:
 			return result;
 		}
-	}
 
-	[TestClass]
-	public class TwoSumTest
-	{
 		[TestMethod]
-		public void Test1()
+		public void SimpleTest1()
 		{
-			int[] result = Program.TwoSum(new int[] { 2, 7, 11, 15 }, 9);
+			int[] result = _00001_Two_Sum.TwoSumSimple(new int[] { 2, 7, 11, 15 }, 9);
 			Assert.AreEqual(result[0], 0);
 			Assert.AreEqual(result[1], 1);
 		}
 
 		[TestMethod]
-		public void Test2()
+		public void SimpleTest2()
 		{
-			int[] result = Program.TwoSum(new int[] { 3, 2, 4 }, 6);
+			int[] result = _00001_Two_Sum.TwoSumSimple(new int[] { 3, 2, 4 }, 6);
 			Assert.AreEqual(result[0], 1);
 			Assert.AreEqual(result[1], 2);
 		}
 
 		[TestMethod]
-		public void Test3()
+		public void SimpleTest3()
 		{
-			int[] result = Program.TwoSum(new int[] { 3, 3 }, 6);
+			int[] result = _00001_Two_Sum.TwoSumSimple(new int[] { 3, 3 }, 6);
 			Assert.AreEqual(result[0], 0);
 			Assert.AreEqual(result[1], 1);
 		}
 
 		[TestMethod]
-		public void Test4()
+		public void SimpleTest4()
 		{
-			int[] result = Program.TwoSum(new int[] { -3, 4, 3, 90 }, 0);
+			int[] result = _00001_Two_Sum.TwoSumSimple(new int[] { -3, 4, 3, 90 }, 0);
 			Assert.AreEqual(result[0], 0);
 			Assert.AreEqual(result[1], 2);
 		}
